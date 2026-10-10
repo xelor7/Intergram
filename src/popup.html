@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intergram settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup-shell">
+    <header class="popup-header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><defs><linearGradient id="popup-instagram-camera" x1="3" y1="21" x2="21" y2="3" gradientUnits="userSpaceOnUse"><stop stop-color="#feda75"/><stop offset=".25" stop-color="#fa7e1e"/><stop offset=".5" stop-color="#d62976"/><stop offset=".75" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="3.1" y="3.1" width="17.8" height="17.8" rx="5.1" fill="none" stroke="url(#popup-instagram-camera)" stroke-width="2.3"/><circle cx="12" cy="12" r="4.05" fill="none" stroke="url(#popup-instagram-camera)" stroke-width="2.3"/><circle cx="17.55" cy="6.55" r="1.2" fill="url(#popup-instagram-camera)"/></svg></span>
+        <div><strong>Intergram</strong></div>
+      </div>
+      <label class="power-toggle" aria-label="Enable intergram">
+        <input type="checkbox" data-setting="enabled">
+        <span></span>
+      </label>
+    </header>
+
+    <section class="panel theme-panel">
+      <div class="panel-heading"><h2>Theme</h2><span>14 palettes</span></div>
+      <div class="theme-grid" id="theme-grid">
+        <button class="theme-chip" data-theme="obsidian-glass" title="Obsidian glass"><i style="background:linear-gradient(135deg,#1a1a22,#0b0b0f)"></i>obsidian</button>
+        <button class="theme-chip" data-theme="daylight-glass" title="Daylight glass"><i style="background:linear-gradient(135deg,#ffffff,#eef0f5)"></i>daylight</button>
+        <button class="theme-chip" data-theme="daylight-linen" title="Daylight linen"><i style="background:#f3f4f1"></i>linen</button>
+        <button class="theme-chip" data-theme="instagram-spectrum" title="Instagram spectrum"><i style="background:linear-gradient(135deg,#8b69c7,#d95589,#f09a5a)"></i>instagram</button>
+        <button class="theme-chip" data-theme="solar-frosted" title="Solar frosted"><i style="background:#f2f4fa"></i>solar</button>
+        <button class="theme-chip" data-theme="arctic-glass" title="Arctic glass"><i style="background:#e9f2f7"></i>arctic</button>
+        <button class="theme-chip" data-theme="obsidian-aurora" title="Obsidian aurora"><i style="background:#1c1b20"></i>aurora</button>
+        <button class="theme-chip" data-theme="vision-frost" title="Vision frost"><i style="background:#17202b"></i>vision</button>
+        <button class="theme-chip" data-theme="cyber-aurora" title="Sage night"><i style="background:#17221f"></i>sage night</button>
+        <button class="theme-chip" data-theme="rose-quartz" title="Rose quartz"><i style="background:#25171e"></i>rose</button>
+        <button class="theme-chip" data-theme="midnight-oled" title="Midnight OLED"><i style="background:#08080a"></i>midnight</button>
+        <button class="theme-chip" data-theme="pure-black" title="Pure black"><i style="background:#000"></i>pure black</button>
+        <button class="theme-chip" data-theme="matcha-glass" title="Matcha"><i style="background:#192019"></i>matcha</button>
+        <button class="theme-chip" data-theme="cocoa-dusk" title="Cocoa dusk"><i style="background:#211a18"></i>cocoa</button>
+      </div>
+      <label class="control-line"><span>gradient intensity</span><output data-value-for="themeGradientIntensity"></output></label>
+      <input class="range" type="range" min="0" max="150" step="1" data-setting="themeGradientIntensity" aria-label="Theme gradient intensity">
+      <label class="switch-line"><span>use previous gradient as base</span><input type="checkbox" data-setting="baseGradientEnabled"></label>
+      <label class="switch-line"><span>optional theme gradient overlay</span><input type="checkbox" data-setting="extraThemeGradient"></label>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading"><h2>Surfaces</h2><span>subtle glass</span></div>
+      <label class="control-line"><span>backdrop blur</span><output data-value-for="blurStrength"></output></label>
+      <input class="range" type="range" min="0" max="28" step="1" data-setting="blurStrength" aria-label="Backdrop blur">
+      <label class="control-line"><span>topbar blur</span><output data-value-for="topbarBlurStrength"></output></label>
+      <input class="range" type="range" min="0" max="28" step="1" data-setting="topbarBlurStrength" aria-label="Topbar blur">
+      <label class="switch-line"><span>opaque topbar while scrolling</span><input type="checkbox" data-setting="topbarOpaqueOnScroll"></label>
+      <label class="control-line"><span>corner radius</span><output data-value-for="borderRadius"></output></label>
+      <input class="range" type="range" min="8" max="28" step="1" data-setting="borderRadius" aria-label="Corner radius">
+      <label class="control-line"><span>surface opacity</span><output data-value-for="glassOpacity"></output></label>
+      <input class="range" type="range" min="35" max="100" step="1" data-setting="glassOpacity" aria-label="Surface opacity">
+      <label class="control-line"><span>navigation & studio scale</span><output data-value-for="uiScale"></output></label>
+      <input class="range" type="range" min="80" max="110" step="1" data-setting="uiScale" aria-label="Navigation and studio scale">
+    </section>
+
+    <section class="panel two-col-panel">
+      <div class="panel-heading"><h2>Page layout</h2></div>
+      <label class="switch-line"><span>wide feed</span><input type="checkbox" data-setting="wideFeedMode"></label>
+            <label class="switch-line"><span>ambient light</span><input type="checkbox" data-setting="ambientLight"></label>
+      <label class="control-line"><span>Reels ambience</span><select data-setting="reelAmbientMode"><option value="live">live video frame</option><option value="theme-gradient">theme gradient</option><option value="blend">blend live + theme</option></select></label>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading"><h2>Video & motion</h2></div>
+      <label class="control-line"><span>video presentation</span><select data-setting="videoFilter"><option value="off">original</option><option value="ultra-crisp">light clarity</option><option value="cinema-hdr">cinema</option></select></label>
+      <label class="control-line"><span>video colour</span><output data-value-for="videoVibrance"></output></label>
+      <input class="range" type="range" min="90" max="125" step="1" data-setting="videoVibrance" aria-label="Video colour">
+      <label class="switch-line"><span>video ambilight</span><input type="checkbox" data-setting="videoAmbilight"></label>
+      <div class="light-tuning">
+        <label class="control-line" for="ambient-intensity"><span>glow intensity</span><output data-value-for="ambientIntensity"></output></label>
+        <input class="range" id="ambient-intensity" type="range" min="0" max="100" step="2" data-setting="ambientIntensity" aria-label="Glow intensity">
+        <label class="control-line" for="ambient-blur"><span>glow softness</span><output data-value-for="ambientBlur"></output></label>
+        <input class="range" id="ambient-blur" type="range" min="12" max="100" step="2" data-setting="ambientBlur" aria-label="Glow softness">
+        <label class="control-line" for="ambient-spread"><span>glow spread</span><output data-value-for="ambientSpread"></output></label>
+        <input class="range" id="ambient-spread" type="range" min="8" max="96" step="2" data-setting="ambientSpread" aria-label="Glow spread">
+        <label class="control-line" for="ambient-rate"><span>live update rate</span><output data-value-for="ambientFrameRate"></output></label>
+        <input class="range" id="ambient-rate" type="range" min="2" max="30" step="1" data-setting="ambientFrameRate" aria-label="Ambient light update rate">
+      </div>
+      <label class="switch-line"><span>smooth video controls</span><input type="checkbox" data-setting="videoSmoothControls"></label>
+      <label class="switch-line"><span>reels immersive</span><input type="checkbox" data-setting="immersiveReels"></label>
+      <label class="control-line"><span>motion</span><select data-setting="animationPreset"><option value="balanced">balanced</option><option value="snappy">snappy</option><option value="gentle">gentle</option></select></label>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading"><h2>Navigation & privacy</h2></div>
+      <label class="control-line"><span>navigation size</span><output data-value-for="dockScale"></output></label>
+      <input class="range" type="range" min="0.9" max="1.2" step="0.02" data-setting="dockScale" aria-label="Navigation size">
+      <label class="switch-line"><span>show navigation labels</span><input type="checkbox" data-setting="dockLabels"></label>
+      <label class="switch-line"><span>blur messages until hover</span><input type="checkbox" data-setting="blurDMsUntilHover"></label>
+      <label class="switch-line"><span>hide sponsored posts</span><input type="checkbox" data-setting="hideSponsored"></label>
+    </section>
+
+    <footer class="popup-footer">
+      <div class="popup-footer-main">
+        <span id="status-text">Settings sync to Instagram.</span>
+        <div><button type="button" id="open-studio">open studio</button><button type="button" id="reset-btn">reset</button></div>
+      </div>
+      <nav class="popup-socials" aria-label="Intergram social links">
+        <a href="https://github.com/xelor7" target="_blank" rel="noreferrer" title="GitHub · xelor7" aria-label="GitHub, xelor7"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 0 0-3.57 22.02c.57.1.78-.25.78-.55v-2.1c-3.18.69-3.85-1.35-3.85-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.24 3.35.95.1-.73.4-1.24.7-1.53-2.54-.29-5.2-1.27-5.2-5.65 0-1.25.44-2.28 1.17-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.74 0c2.19-1.48 3.15-1.17 3.15-1.17.62 1.58.23 2.75.11 3.04.73.8 1.17 1.83 1.17 3.08 0 4.39-2.67 5.36-5.22 5.64.41.35.77 1.02.77 2.06v3.17c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"/></svg><span>GitHub</span></a>
+        <a href="https://www.youtube.com/@xelor7" target="_blank" rel="noreferrer" title="YouTube · @xelor7" aria-label="YouTube, at xelor seven"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8Z"/><path d="m9.6 15.7 6.2-3.7-6.2-3.7v7.4Z" fill="#fff"/></svg><span>YouTube</span></a>
+        <a href="https://dsc.gg/xelor" target="_blank" rel="noreferrer" title="Discord · dsc.gg/xelor" aria-label="Discord, d s c dot g g slash xelor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.2A19.3 19.3 0 0 0 15 3.75l-.58 1.18a17.8 17.8 0 0 0-4.84 0L9 3.75a19.3 19.3 0 0 0-4.7 1.45C1.33 9.56.52 13.84.92 18.06a19.4 19.4 0 0 0 5.8 2.91l1.25-2.03c-.69-.26-1.34-.58-1.95-.97l.48-.37c3.77 1.75 7.86 1.75 11.58 0l.49.37c-.62.39-1.27.72-1.96.98l1.25 2.02a19.3 19.3 0 0 0 5.8-2.9c.47-4.9-.8-9.14-3.97-12.87ZM8.7 15.15c-1.13 0-2.05-1.04-2.05-2.32s.9-2.33 2.05-2.33 2.08 1.05 2.06 2.33c0 1.28-.91 2.32-2.06 2.32Zm6.6 0c-1.13 0-2.05-1.04-2.05-2.32s.9-2.33 2.05-2.33 2.08 1.05 2.06 2.33c0 1.28-.9 2.32-2.06 2.32Z"/></svg><span>Discord</span></a>
+      </nav>
+    </footer>
+  </main>
+  <script src="combobox.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

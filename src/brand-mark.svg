@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" role="img" aria-label="Instagram camera mark">
+  <defs>
+    <linearGradient id="instagram-camera" x1="3" y1="21" x2="21" y2="3" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#feda75"/>
+      <stop offset=".25" stop-color="#fa7e1e"/>
+      <stop offset=".5" stop-color="#d62976"/>
+      <stop offset=".75" stop-color="#962fbf"/>
+      <stop offset="1" stop-color="#4f5bd5"/>
+    </linearGradient>
+  </defs>
+  <rect x="3.1" y="3.1" width="17.8" height="17.8" rx="5.1" stroke="url(#instagram-camera)" stroke-width="2.3"/>
+  <circle cx="12" cy="12" r="4.05" stroke="url(#instagram-camera)" stroke-width="2.3"/>
+  <circle cx="17.55" cy="6.55" r="1.2" fill="url(#instagram-camera)"/>
+</svg>
