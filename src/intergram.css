@@ -1,4 +1,4 @@
-/* intergram · project by xelor — Instagram Web redesign, v1.0.0
+/* intergram · project by xelor — Instagram Web redesign, v1.0.1
    Design system: "Glass Aurora".
 
    SINGLE SOURCE OF TRUTH: the --ig-* variables below. Every Instagram-facing
@@ -8910,7 +8910,7 @@ html.intergram-active.intergram-theme #igx-route-nav-wrap {
   html.intergram-active.intergram-theme #igx-route-nav-wrap { top: 52px !important; }
 }
 
-/* v1.0.0: during Reels only, link the surrounding page background and topbar
+/* v1.0.1: during Reels only, link the surrounding page background and topbar
    to the same smoothed live-frame hue. Other routes keep their exact page
    base gradient and optional theme overlay without an ambient tint. */
 html.intergram-active.intergram-theme[data-igx-page="reels"] {
@@ -8944,4 +8944,71 @@ html.intergram-active.intergram-theme[data-igx-page="reels"][data-igx-video-glow
 html.intergram-active.intergram-theme[data-igx-page="reels"][data-igx-video-glow="true"][data-igx-extra-gradient="true"] #igx-topbar,
 html.intergram-active.intergram-theme[data-igx-page="reels"][data-igx-video-glow="true"][data-igx-extra-gradient="true"] #igx-topbar::before {
   background-image: var(--igx-topbar-ambient-gradient), var(--igx-theme-gradient-overlay), var(--igx-base-page-gradient) !important;
+}
+
+html.intergram-active.intergram-theme[data-igx-page="profile"] :is(
+  header,
+  .igx-profile-header,
+  section:not(.igx-main-surface):not(.igx-profile-layout):not(.igx-profile-surface),
+  [role="menu"],
+  .x1gslohp,
+  .x7a106z,
+  .x1dlrdel,
+  .x1fkh5qu,
+  .xcbf60w,
+  .xw7yly9
+),
+html.intergram-active.intergram-theme[data-igx-page="profile"] :is(
+  header,
+  .igx-profile-header
+) > * {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html.intergram-active.intergram-theme[data-igx-page="profile"],
+html.intergram-active.intergram-theme[data-igx-page="profile"] body,
+html.intergram-active.intergram-theme[data-igx-page="profile"] main,
+html.intergram-active.intergram-theme[data-igx-page="profile"] [role="main"],
+html.intergram-active.intergram-theme[data-igx-page="profile"] .igx-main-surface {
+  background-color: var(--ig-bg) !important;
+  background-image: var(--igx-base-page-gradient) !important;
+  background-attachment: fixed !important;
+  background-position: left top !important;
+  background-repeat: no-repeat !important;
+}
+
+html.intergram-active.intergram-theme[data-igx-page="profile"] {
+  position: relative !important;
+}
+html.intergram-active.intergram-theme[data-igx-page="profile"]::before {
+  content: "" !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background-color: var(--ig-bg) !important;
+  background-image: var(--igx-base-page-gradient) !important;
+  background-attachment: fixed !important;
+  background-position: left top !important;
+  background-repeat: no-repeat !important;
+  filter: brightness(2.2) !important;
+}
+
+html.intergram-active.intergram-theme[data-igx-page="profile"] body {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#darken {
+  filter: brightness(2.2) !important;
+  mix-blend-mode: normal !important;
+  pointer-events: none !important;
 }

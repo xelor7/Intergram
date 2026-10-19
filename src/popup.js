@@ -1,4 +1,4 @@
-// intergram · project by xelor — extension popup, v1.0.0
+// intergram · project by xelor — extension popup, v1.0.1
 const DEFAULT_CONFIG = {
   schemaVersion: 12,
   enabled: true,
