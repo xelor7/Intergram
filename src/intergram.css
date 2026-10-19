@@ -1,4 +1,4 @@
-/* intergram · project by xelor — Instagram Web redesign, v1.0.1
+/* intergram · project by xelor — Instagram Web redesign, v1.0.2
    Design system: "Glass Aurora".
 
    SINGLE SOURCE OF TRUTH: the --ig-* variables below. Every Instagram-facing
@@ -8910,7 +8910,7 @@ html.intergram-active.intergram-theme #igx-route-nav-wrap {
   html.intergram-active.intergram-theme #igx-route-nav-wrap { top: 52px !important; }
 }
 
-/* v1.0.1: during Reels only, link the surrounding page background and topbar
+/* v1.0.2: during Reels only, link the surrounding page background and topbar
    to the same smoothed live-frame hue. Other routes keep their exact page
    base gradient and optional theme overlay without an ambient tint. */
 html.intergram-active.intergram-theme[data-igx-page="reels"] {
@@ -9011,4 +9011,24 @@ html.intergram-active.intergram-theme[data-igx-page="profile"] body {
   filter: brightness(2.2) !important;
   mix-blend-mode: normal !important;
   pointer-events: none !important;
+}
+
+.x1g0dm76.xpdmqnj,
+.xvbhtw8.x78zum5.xdt5ytf.x5yr21d.x1n2onr6,
+.igx-post-action-host,
+.igx-post-actions {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.igx-post-action-host::before,
+.igx-post-action-host::after,
+.igx-post-actions::before,
+.igx-post-actions::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }

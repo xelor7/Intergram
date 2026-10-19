@@ -1,5 +1,5 @@
 // intergram · project by xelor
-// Instagram Web content script — v1.0.1
+// Instagram Web content script — v1.0.2
 (() => {
   "use strict";
 

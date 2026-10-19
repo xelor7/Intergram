@@ -1,4 +1,4 @@
-// intergram · project by xelor — Manifest V3 service worker, v1.0.1
+// intergram · project by xelor — Manifest V3 service worker, v1.0.2
 const DEFAULT_CONFIG = {
   schemaVersion: 12,
   enabled: true,
