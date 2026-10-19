@@ -1,4 +1,4 @@
-/* intergram · project by xelor — Instagram Web redesign, v1.0.2
+/* intergram · project by xelor — Instagram Web redesign, v1.0.3
    Design system: "Glass Aurora".
 
    SINGLE SOURCE OF TRUTH: the --ig-* variables below. Every Instagram-facing
@@ -7728,9 +7728,9 @@ html.intergram-active .igx-explore-reel-overlay-pass-through {
 html.intergram-active.intergram-theme,
 html.intergram-active.intergram-theme body {
   background:
-    radial-gradient(ellipse 58vw 54vh at 3% 0%, rgba(250, 126, 30, calc(.16 * var(--igx-theme-gradient-intensity, 1))), transparent 74%),
+    radial-gradient(ellipse 58vw 54vh at 3% 0%, rgba(250, 126, 30, calc(.12 * var(--igx-theme-gradient-intensity, 1))), transparent 74%),
     radial-gradient(ellipse 52vw 50vh at 98% 16%, rgba(214, 41, 118, calc(.14 * var(--igx-theme-gradient-intensity, 1))), transparent 74%),
-    radial-gradient(ellipse 56vw 46vh at 8% 100%, rgba(150, 47, 191, calc(.13 * var(--igx-theme-gradient-intensity, 1))), transparent 76%),
+    radial-gradient(ellipse 56vw 46vh at 8% 100%, rgba(150, 47, 191, calc(.09 * var(--igx-theme-gradient-intensity, 1))), transparent 76%),
     radial-gradient(ellipse 52vw 48vh at 100% 100%, rgba(79, 91, 213, calc(.10 * var(--igx-theme-gradient-intensity, 1))), transparent 76%),
     radial-gradient(ellipse 48vw 42vh at 48% 50%, rgba(var(--igx-accent-rgb, 139, 125, 255), calc(.08 * var(--igx-theme-gradient-intensity, 1))), transparent 78%),
     linear-gradient(138deg,
@@ -8910,14 +8910,14 @@ html.intergram-active.intergram-theme #igx-route-nav-wrap {
   html.intergram-active.intergram-theme #igx-route-nav-wrap { top: 52px !important; }
 }
 
-/* v1.0.2: during Reels only, link the surrounding page background and topbar
+/* v1.0.3: during Reels only, link the surrounding page background and topbar
    to the same smoothed live-frame hue. Other routes keep their exact page
    base gradient and optional theme overlay without an ambient tint. */
 html.intergram-active.intergram-theme[data-igx-page="reels"] {
   --igx-topbar-ambient-gradient:
-    radial-gradient(ellipse 64vw 27vh at 50% 0%, rgba(var(--igx-glow-rgb, var(--ig-rgb-accent)), calc(.36 * var(--igx-ambient-intensity, .84))), transparent 77%),
-    radial-gradient(ellipse 68vw 58vh at 50% 43%, rgba(var(--igx-glow-rgb, var(--ig-rgb-accent)), calc(.30 * var(--igx-ambient-intensity, .84))), transparent 79%),
-    radial-gradient(ellipse 56vw 44vh at 98% 100%, rgba(var(--igx-glow-rgb, var(--ig-rgb-accent)), calc(.22 * var(--igx-ambient-intensity, .84))), transparent 81%);
+    radial-gradient(ellipse 54vw 27vh at 58% 0%, rgba(var(--igx-glow-rgb, var(--ig-rgb-accent)), calc(.20 * var(--igx-ambient-intensity, .84))), transparent 77%),
+    radial-gradient(ellipse 68vw 58vh at 50% 43%, rgba(var(--igx-glow-rgb, var(--ig-rgb-accent)), calc(.16 * var(--igx-ambient-intensity, .84))), transparent 79%),
+    radial-gradient(ellipse 56vw 44vh at 98% 100%, rgba(var(--igx-glow-rgb, var(--ig-rgb-accent)), calc(.10 * var(--igx-ambient-intensity, .84))), transparent 81%);
 }
 html.intergram-active.intergram-theme[data-igx-page="reels"][data-igx-video-glow="true"],
 html.intergram-active.intergram-theme[data-igx-page="reels"][data-igx-video-glow="true"] body {

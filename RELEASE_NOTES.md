@@ -1,3 +1,7 @@
+# v1.0.3
+
+Soften the left side of the page/topbar gradient and reduce Reels ambient tint strength.
+
 # v1.0.2
 
 Remove background fills and pseudo-element fills around post actions.

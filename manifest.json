@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Intergram",
   "short_name": "Intergram",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Instagram theme controls with native interactions, static branding, and live/theme/blended Reel ambience.",
   "author": "xelor",
   "icons": {
